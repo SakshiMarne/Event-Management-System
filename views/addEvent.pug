@@ -15,7 +15,7 @@ block content
                     +form
             else
                 form.col.s12(role='form', action="/events/addEvent", method="post", enctype="multipart/form-data")
-                    +form
+                        +form
 mixin form
     .row
         .input-field.col.s8.m7
@@ -69,10 +69,10 @@ mixin form
             label(for="indEvent") No
     if !event.isTeamEvent
         .row#minPart.hidden
-            mixin minPart
+            +minPart
     else
         .row#minPart
-            mixin minPart
+            +minPart
 
     .row
         .col.s12
