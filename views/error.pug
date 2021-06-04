@@ -1,0 +1,19 @@
+extends layout
+
+block meta
+    title= "Error : " + error.status
+
+block content
+    .container
+        if error.status==404
+            h4.intro= 'Sorry!'
+            h4 The page you were looking for is lost in time.
+        else
+            h4.intro= error.status
+            h5= message
+        if is_admin
+            pre #{error.stack}
+
+block style
+    style
+        include ../public/assets/stylesheets/pages/about.css

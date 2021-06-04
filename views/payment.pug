@@ -1,0 +1,30 @@
+doctype html
+html(lang='en' dir='ltr')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
+    title Paytm-Nodejs
+  body(style='background-color:#f5f3ef')
+    .row.my-5
+      .col-md-4.offset-md-4
+        .card
+          .card-body
+            form(action='/payment' method='post')
+              .form-group
+                label(for='') Name: 
+                input.form-control(type='text' name='name' value='' required=true)
+              .form-group
+                label(for='') Email: 
+                input.form-control(type='text' name='email' value='' required=true)
+              .form-group
+              .form-group
+                label(for='') MIT ID: 
+                input.form-control(type='text' name='MIT iD' value='' required=true)
+                label(for='') Phone: 
+                input.form-control(type='text' name='phone' value='' required=true)
+              .form-group
+                label(for='') Amount: 
+                input.form-control(type='text' name='amount' value='' required=true)
+              .form-group
+                button.btn.form-control.btn-primary Pay Now
+    p

@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    .container
+        .card.row
+            form.col.s12(role="form" action="/emailBlast" method="post")
+                h3.intro Email Blast
+
+                    if failure
+                        if failure.length == 0
+                            h5.blue-text Success
+                        else
+                            h5.red-text Failure
+                            p
+                                for email in failure
+                                    span= email + ', '
+
+                .input-field.col.s8.m7
+                    select#list(name="emailList" required)
+                        option(value="all") All
+                        option(value="specify") Specify Below
+                        each event in events
+                            option(value=event.linkName) Event: #{event.name}
+                    label(for="list") Who To Send
+
+                .input-field.col.s8.m7
+                    input(type='text', id="mit_ids" name="mit_ids")
+                    label(for="mit_ids") Enter MIT IDs(comma separated)
+
+                .input-field.col.s8.m7
+                    select#template(name="type" required)
+                        option(value="custom" ) Custom Notification Message
+                        option(value="welcome") Welcome Mail
+                        option(value="app") App Download
+                        option(value="schedule") Schedule
+                    label(for="template") Select Template
+
+                .input-field.col.s8.m7
+                    input(type='text' id="subject" name="subject")
+                    label(for="subject") Subject
+
+                .input-field.col.s8.m7
+                    textarea.materialize-textarea(id="message" name="message" style="min-height:120px;")
+                    label(for="message") Message
+
+                .col.s8.m7
+                    .row
+                        button.btn.waves-effect.waves-light(type="submit") Send
+block style
+    style
+        include ../public/assets/stylesheets/pages/about.css

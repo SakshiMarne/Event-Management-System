@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    .container
+        .card.row
+            .col.s10.offset-s1
+                br
+                h3.intro User Info
+                if err
+                    h5.red-text #{msg}
+                else
+                    h5.blue-text #{msg}
+                if admin
+                    - var call = '/users/userInfo'
+                else
+                    - var call = '/users/oh/my/god/userInfo'
+                form.col.s6(action=call method='post' role='form')
+                    .row
+                        .input-field.col.s12
+                            input(id='mit_id', name='mit_id', type='text')
+                            label.active(for='mit_id') Your User ID
+                    .row
+                        h6 Name
+                        if user._id
+                            p= user.firstName +" "+ user.lastName
+                        else if (user.success)
+                            p= user.user.name
+                    .row
+                        h6 College
+                        if user._id
+                            p= user.college
+                        else if (user.success)
+                            p= user.user.college
+                    .row
+                        if admin
+                            .col.s6
+                                h6 Email
+                                p= user.email
+                            .col.s6
+                                h6 Phone Number
+                                p= user.phone_no
+                    .row
+                        button.btn.waves-effect.waves-light(type="submit") Submit
+                if admin
+                    .col.s6
+                        img(src=user.photoId style="width:80%")
+
+block style
+    style
+        include ../public/assets/stylesheets/pages/about.css

@@ -1,0 +1,81 @@
+extends layout
+
+block meta
+    if category
+        title= category + ' Events - Mitvision, CS'
+    else
+        title= 'Events - Mitvision, CS'
+
+block content
+    .slider
+        ul.slides.black
+            li
+                img(src="/assets/images/pd.jpg")
+                .caption.left-align
+                    h3 PANEL DISCUSSION
+                    h5.light.
+                        Clash of wits, conflicting intellects, a hour of unprecedented
+                        intellectual simulation awaits the people in the form of 'Panel Discussion'
+            li
+                img(src="/assets/images/robowars.jpg")
+                .caption.left-align
+                    h3 ROBOTICA
+                    h5.light.
+                        An array of various robotics competitions that include
+                        Line Follower competition, Robot Quidditch, Maze
+                        Navigation event and several more.
+            li
+                img(src="/assets/images/felicity.jpg")
+                .caption.left-align
+                    h3 FELICITY
+                    h5.light.
+                        Intense happiness. Delight. Satisfaction. The Oxford Dictionary
+                        doesn’t come close to describe all the emotions that Felicity at Mit’
+                        induces. Felicity is one of the headliner events at the fest.
+            li
+                img(src="/assets/images/defexpo.jpg")
+                .caption.left-align
+                    h3 DEFENSE EXPO
+                    h5.light.
+                        Defense Expo, done in collaboration with various government
+                        bodies, is an exhibition of state-of-the-art
+                        artillery and machines used by the Indian Army.
+    .container
+        .row
+            if category
+                h3.center.zero.intro= category + ' Events'
+            else
+                h3.center.zero.intro Events
+        .row
+            each event, index in events
+                .events.col.s12.m6.l4
+                    .card.small.event
+                        .card-image.waves-effect.waves-block.waves.light
+                            img.activator(src=event.photo)
+                        .card-content
+                            span.card-title.activator.white-text #{event.name}
+                                i.material-icons.right more_vert
+                            if event.fbLink
+                                p: a(target="_blank" href=event.fbLink)
+                                    img(src='/assets/images/fb.png', width='20px', height='20px')
+                        .card-reveal.event
+                            span.card-title.white-text #{event.name}
+                                i.material-icons.right close
+                            p #{event.shortDetails}
+                            a(href="/events/" + event.linkName)
+                                button.btn.waves-effect.waves-light More Details
+
+block style
+    style
+        if category == "Hardware" || category == "Online"
+            include ../public/assets/stylesheets/pages/robot.css
+        else if category == "Bio"
+            include ../public/assets/stylesheets/pages/bio.css
+        else if category == "Coding" || category == "Robotica"
+            include ../public/assets/stylesheets/pages/code.css
+        else if category == "Mega"
+            include ../public/assets/stylesheets/pages/mega.css
+        else if category == "Quiz"
+            include ../public/assets/stylesheets/pages/misc.css
+        else
+            include ../public/assets/stylesheets/pages/list.css

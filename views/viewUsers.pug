@@ -1,0 +1,56 @@
+extends layout
+
+block meta
+    title= 'Admin: Participants - Mitvision, CS'
+
+block content
+    .container
+        .row
+            .col
+                h5.intro Export to excel
+                a(href="/events/" + event.linkName + "/participants.xls") Download
+        .row
+            .col.s12
+                h5.intro Add Participant
+                form.col.s12(role="form" action="/events/" + event.linkName + "/register-i" method="post")
+                    if err
+                        h5.red-text= err
+                    .input-field.col.s12
+                        input(type='text', id="mit_ids" name="mit_ids" required=true)
+                        label(for="mit_ids") Enter MIT IDs(comma separated)
+                    button.btn.waves-effect.waves-light(type="submit") Add Participants
+        .row
+            .col
+                if participants
+                    h3.intro Participants of #{event.name}
+                if members
+                    h3.intro Team Members of #{team.name}
+                table.centered.responsive-table
+                    thead
+                        tr
+                            th(data-field='num') #
+                            th(data-field='id') MIT ID
+                            th(data-field='name') Name
+                            th(data-field='college') College
+                            th(data-field='email') Email
+                            th(data-field='phone') Phone Number
+                            th(data-field='photo') Photo Upload
+                    tbody
+                        each p, index in participants
+                            tr
+                                td= index + 1
+                                td= p.mit_id
+                                td= p.firstName + ' ' + p.lastName
+                                td= p.college + ', ' + p.course
+                                td= p.email
+                                td= p.phone_no
+                                if p.photoId
+                                    td
+                                        a(href="/users/userInfo/" + p.mit_id target="_blank")
+                                            | &#10004
+                                else
+                                    td
+                                        a(href="/users/photoUpload/" + p.mit_id) &#10060
+block style
+    style
+        include ../public/assets/stylesheets/pages/about.css

@@ -1,0 +1,20 @@
+extends layout
+
+block meta
+    title= 'Admin: Add EM - Mitvision, CS'
+
+block content
+    .container
+        .row
+            h3.intro Add Event Managers
+            form.col.s12(role="form" action="/users/addEM" method="post")
+                if msg
+                    h5= msg
+                .input-field.col.s8.m7
+                    input(type='text', id="mit_ids" name="mit_ids" required=true)
+                    label(for="mit_ids") Enter MIT IDs(comma separated)
+
+                button.btn.waves-effect.waves-light(type="submit") Add
+block style
+    style
+        include ../public/assets/stylesheets/pages/about.css

@@ -1,0 +1,23 @@
+{
+    "mailgun": {
+      "auth": {
+        "api_key": "<your-mailgun-api-key>",
+        "domain": "<domain-registered-on-mailgun>"
+      }
+    },
+    "url": "https://#",
+    "hashids": {
+      "secret": "HASH_SECRET",
+      "no_chars": 4,
+      "chars": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    },
+    "contactEmail": "",
+    "dbhost": "mongodb+srv://sakshimarne:marne17@cluster0.mdy10.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "sessionSecret": "SESSION_SECRET",
+    "fb": {
+      "clientID": "FB_APP_ID",
+      "clientSecret": "FB_APP_SECRET",
+      "callbackURL": "https://#"
+    }
+  }
+  
