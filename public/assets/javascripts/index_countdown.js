@@ -1,7 +1,7 @@
 function updateTime() {
   var today = new Date();
   var nextyear=2021;
-  var deadline = 'May 30 ' + nextyear + " 00:00:00";
+  var deadline = 'June 7 ' + nextyear + " 00:00:00";
   //var deadline = 'June 2 ' + (today.getFullYear()) + " 15:58:30";
   if (today.getMonth == 0 && today.getDate == 1) {
     deadline = 'January 1 ' + nextyear + " 00:00:00";

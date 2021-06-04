@@ -2,7 +2,7 @@ var express = require('express');
 var Events = require('../models/event');
 var router = express.Router();
 var config = require('config');
-//Last modified by Rohit Maurya
+//Last modified by shreyash shinde
 var URL = config.get('url');
 var defURLs = [
     {url: '/', priority: 1.0},

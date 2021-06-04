@@ -9,7 +9,7 @@ var nodemailer = require('nodemailer');
 var mailgun = require('nodemailer-mailgun-transport');
 var userLogic = require('../logic/userLogic.js');
 var config = require('config');
-//Last modified by Rohit Maurya
+//Last modified by shreyash shinde
 var auth = config.get('mailgun');
 
 var hashids = new Hashids(config.get('hashids').secret, config.get('hashids').no_chars, config.get('hashids').chars);

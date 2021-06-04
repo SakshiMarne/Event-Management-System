@@ -5,7 +5,7 @@ var Event = require('../models/event');
 var userLogic = require('../logic/userLogic');
 var multer = require('multer');
 var http = require('http');
-//Last modified by Rohit Maurya
+//Last modified by mayur
 var upload = multer({
     dest: 'public/uploads/photoids/',
     limits: {fileSize: 10000000, files:1}

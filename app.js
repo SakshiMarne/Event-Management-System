@@ -10,7 +10,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var paginate = require('express-paginate');
 var Hashids = require("hashids");
-//Last modified and tested by Rohit Maurya
+//Last modified and tested by sakshi Marne
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const checksum_lib = require("./paytm/checksum");

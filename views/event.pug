@@ -56,8 +56,6 @@ block content
                         h5 Team Event
                         p Max Team Size: #{event.minParticipants}
                 h6.col.intro
-                a(href="/payment")
-                 button.btn.waves-effect.waves-light Paynow
                     if !is_registered
                         if event.isTeamEvent
                             a.modal-trigger(href="#eventTeamModal")
@@ -68,6 +66,8 @@ block content
                     else
                         a(href="")
                          button.btn Successfully registered for this event
+                        a(href="/payment")
+                            button.btn.waves-effect.waves-light Paynow
                 br
                 br
                 //TODO: Admin Panel

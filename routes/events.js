@@ -7,7 +7,7 @@ var multer = require('multer');
 var userLogic = require('../logic/userLogic');
 var eventLogic = require('../logic/eventLogic');
 var json2xls = require('json2xls');
-//Last modified by Rohit Maurya
+//Last modified by sakhsi marne
 var upload = multer({
     dest: 'public/uploads/',
     limits: {fileSize: 10000000, files:1}

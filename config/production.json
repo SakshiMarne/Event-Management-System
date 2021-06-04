@@ -1,8 +1,8 @@
 {
     "mailgun": {
       "auth": {
-        "api_key": "<your-mailgun-api-key>",
-        "domain": "<domain-registered-on-mailgun>"
+        "api_key": "96d9543d3ced1c6995577191b64e6c0c-1d8af1f4-465a252c",
+        "domain": "https://app.mailgun.com/app/sending/domains/sandbox71632f58876246528ec83eea6e0afb1a.mailgun.org"
       }
     },
     "url": "https://#",
@@ -15,8 +15,8 @@
     "dbhost": "mongodb+srv://sakshimarne:marne17@cluster0.mdy10.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     "sessionSecret": "SESSION_SECRET",
     "fb": {
-      "clientID": "FB_APP_ID",
-      "clientSecret": "FB_APP_SECRET",
+      "clientID": "3060187344213748",
+      "clientSecret": "c57cf9e483ef8ac911a6387ea771d0df",
       "callbackURL": "https://#"
     }
   }

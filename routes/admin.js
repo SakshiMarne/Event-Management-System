@@ -6,7 +6,7 @@ var router = express.Router();
 var userLogic = require('../logic/userLogic.js');
 var config = require('config');
 var async = require("async");
-//Last modified by Rohit Maurya
+//Last modified by sakshi marne
 var auth = config.get('mailgun');
 
 router.get('/emailBlast',userLogic.isAdmin,function(req,res){

@@ -5,7 +5,7 @@
   "dbhost": "mongodb+srv://sakshimarne:marne17@cluster0.mdy10.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   "sessionSecret": "SESSION_SECRET",
   "fb": {
-    "clientID": "FB_APP_ID",
-    "clientSecret": "FB_APP_SECRET"
+    "clientID": "3060187344213748",
+    "clientSecret": "c57cf9e483ef8ac911a6387ea771d0df"
   }
 }

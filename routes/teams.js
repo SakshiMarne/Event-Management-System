@@ -4,7 +4,7 @@ var router = express.Router();
 var Account = require('../models/account');
 var Team = require('../models/team');
 var userLogic = require('../logic/userLogic');
-//Last modified by Rohit Maurya
+//Last modified by piyush
 router.get('/myTeams', userLogic.ensureAuthenticated, function(req, res) {
 
     Team.find({members: req.user._id}).lean().exec(function(err, teams) {
