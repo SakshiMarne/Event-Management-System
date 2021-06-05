@@ -2,7 +2,7 @@ var express = require('express');
 var Event = require('../models/event');
 var Account = require('../models/account');
 var Team = require('../models/team');
-// last modified by shreyash shinde
+// last modified by shreyash 
 var events = {
 
     isRegistered: function (req, res, next) {
