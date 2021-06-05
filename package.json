@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": " NODE_ENV=development node ./bin/www",
-    "dev:watch": " NODE_ENV=development nodemon ./bin/www",
-    "start": " NODE_ENV=production node ./bin/www"
+    "dev": "cross-env NODE_ENV=development node ./bin/www",
+    "dev:watch": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "start": "cross-env NODE_ENV=production node ./bin/www"
   },
   "dependencies": {
     "async": "^1.5.2",
