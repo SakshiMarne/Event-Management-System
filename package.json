@@ -44,7 +44,9 @@
     "serve-favicon": "^2.5.0",
     "sitemap": "^1.5.0",
     "web-push": "^1.0.2",
-    "node": "10.15.0"
+    "node": "10.15.0",
+    "cross-env": "^7.0.3"
+    
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
